@@ -117,7 +117,7 @@ public class FormBukuPanel extends JPanel {
             currentList.add(bukuBaru);
             handler.save(currentList);
 
-            // --- [FIX] INI KODE YANG KEMARIN HILANG ---
+
             // Mencatat ke LogHandler setelah simpan berhasil
             LogHandler.addLog("TAMBAH BUKU", "Input buku: " + judul + " (" + penulis + ")");
             // ------------------------------------------

@@ -1,13 +1,13 @@
 package model;
 
-// MODUL 3: Inheritance (Extends)
+// Inheritance (Extends)
 public class Buku extends ItemKoleksi {
     private String penulis;
     private String penerbit;
     private int tahun;
     private String status;
 
-    // MODUL 1 & 2: Class & Constructor
+    //  Class & Constructor
     public Buku(String id, String judul, String penulis, String penerbit, int tahun, String status) {
         super(id, judul); // Memanggil constructor parent
         this.penulis = penulis;
@@ -16,13 +16,13 @@ public class Buku extends ItemKoleksi {
         this.status = status;
     }
 
-    // MODUL 4: Overriding Method dari Parent/Abstract
+    // Overriding Method dari Parent/Abstract
     @Override
     public String getTipe() {
         return "Buku Cetak";
     }
 
-    // MODUL 4: Polymorphism (Custom toString)
+    //  Polymorphism (Custom toString)
     @Override
     public String toString() {
         return judul + " oleh " + penulis;

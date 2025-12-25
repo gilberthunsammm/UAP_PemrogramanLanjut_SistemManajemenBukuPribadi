@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
 
-        // --- TAMBAHKAN PANEL BARU ---
+        // ---  PANEL BARU ---
         mainPanel.add(new LoginPanel(this), "login");       // <--- HALAMAN 1
         mainPanel.add(new RegisterPanel(this), "register"); // <--- HALAMAN 2
 
@@ -27,7 +27,7 @@ public class MainFrame extends JFrame {
 
         add(mainPanel, BorderLayout.CENTER);
 
-        // --- UBAH AGAR DEFAULT MUNCUL LOGIN DULUAN ---
+        // ---  DEFAULT MUNCUL LOGIN DULUAN ---
         cardLayout.show(mainPanel, "login");
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
 public class UserHandler {
     private static final String FILE_PATH = "data_users.csv";
 
-    // 1. LOAD DATA USER
+    // LOAD DATA USER
     public static List<User> loadUsers() {
         List<User> list = new ArrayList<>();
         File file = new File(FILE_PATH);
@@ -26,7 +26,7 @@ public class UserHandler {
         return list;
     }
 
-    // 2. CEK LOGIN (AUTHENTICATION)
+    //  CEK LOGIN (AUTHENTICATION)
     public static boolean login(String username, String password) {
         List<User> users = loadUsers();
         for (User u : users) {
@@ -37,7 +37,7 @@ public class UserHandler {
         return false; // Salah
     }
 
-    // 3. DAFTAR USER BARU (REGISTER)
+    //  DAFTAR USER BARU (REGISTER)
     public static boolean register(String username, String password) {
         List<User> users = loadUsers();
         // Cek apakah username sudah ada

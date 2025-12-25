@@ -12,10 +12,10 @@ public class LogHandler {
     // Format Waktu: Tahun-Bulan-Tanggal Jam:Menit:Detik
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    // METHOD 1: MENULIS LOG (Dipanggil saat Tambah/Hapus)
+    //  MENULIS LOG (Dipanggil saat Tambah/Hapus)
     public static void addLog(String aktivitas, String detail) {
         String waktu = LocalDateTime.now().format(formatter);
-        // Format simpan: Waktu;Aktivitas;Detail
+        // Format ubtuk simpan: Waktu;Aktivitas;Detail
         String logEntry = waktu + ";" + aktivitas + ";" + detail;
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE, true))) {
@@ -27,7 +27,7 @@ public class LogHandler {
         }
     }
 
-    // METHOD 2: MEMBACA LOG (Untuk ditampilkan di Tabel History)
+    // MEMBACA LOG (Untuk ditampilkan di Tabel History)
     public static List<String[]> readLogs() {
         List<String[]> logs = new ArrayList<>();
         File file = new File(LOG_FILE);
